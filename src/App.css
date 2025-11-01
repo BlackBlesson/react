@@ -1,0 +1,150 @@
+body{
+background-image: linear-gradient(to right, #0c0226, #290413);
+
+}
+.homebox{
+  text-align: center;
+  padding: 150px;
+  margin-top: 50px;
+
+}
+.borde{
+  border: 3px solid gray;
+  border-radius: 15px;
+  padding: 1px;
+  box-shadow: 02px 02px 3px rgb(110, 109, 109);
+}
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.home {
+  position: relative;
+  background-image: url('/assets/homeimg.webp');
+  background-size: cover;
+  background-position: top-center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;           /* use the same background image */
+  filter: blur(6px) brightness(40%);  /* blur + darken */
+  transform: scale(1.1);         /* avoid edge clipping from blur */
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;            /* keeps text above the overlay */
+  z-index: 2;
+
+}
+.nav-link.active {
+  color: gold !important;
+  font-weight: bold;
+}
+
+#course{
+  padding-top: 100px;
+}
+#about{
+  padding-top: 100px;
+}
+#contact{
+  padding-top: 100px;
+}
+
+ 
+
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: wheat;
+  text-align: center;
+  z-index: 2;
+}
+
+#text{
+  color: rgb(247, 246, 244);
+  padding: 09px;
+}
+.btns{
+transition:  0.3s ;
+
+}
+
+.btns:hover{
+  background-color: rgb(7, 7, 7);
+  color: rgb(253, 250, 250);
+  transform: scale(1.2);
+}
+.course{
+  background: transparent;
+  margin-top: 40px;
+  padding: 30px;
+  
+}
+.card{
+  transition: 0.01;
+}
+.classes{
+  background-color: rgba(255, 255, 255, 0.137);
+  color: white;
+}
+.card:hover{
+  background-color: #0c0226;
+  color: white;
+  transform: scale(1.1);
+}
+.card-img-top {
+  height: 150px;     
+  object-fit: cover; 
+}
+.link{
+  text-decoration: none;
+}
+.buttons{
+  text-decoration: none;
+  transition: 0.5;
+  background-color: black;
+  color: white;
+  padding: 9px;
+  border-radius: 7px;
+}
+.buttons:hover{
+  background-color: white;
+  color: black;
+  transform: scale(0.9);
+}
+.heading{
+  text-shadow: 2px 2px 3px;
+}
+
+
