@@ -13,6 +13,7 @@ background-image: linear-gradient(to right, #0c0226, #290413);
   border-radius: 15px;
   padding: 1px;
   box-shadow: 02px 02px 3px rgb(110, 109, 109);
+  background-color: black;
 }
 .hero-container {
   position: relative;
@@ -40,14 +41,14 @@ background-image: linear-gradient(to right, #0c0226, #290413);
   left: 0;
   width: 100%;
   height: 100%;
-  background: inherit;           /* use the same background image */
-  filter: blur(6px) brightness(40%);  /* blur + darken */
-  transform: scale(1.1);         /* avoid edge clipping from blur */
+  background: inherit;           
+  filter: blur(6px) brightness(40%);  
+  transform: scale(1.1);         
   z-index: 1;
 }
 
 .home-content {
-  position: relative;            /* keeps text above the overlay */
+  position: relative;            
   z-index: 2;
 
 }
@@ -66,7 +67,16 @@ background-image: linear-gradient(to right, #0c0226, #290413);
   padding-top: 100px;
 }
 
- 
+.nav{
+  margin-top: 0px;
+}
+.abouts{
+  font-size: 25px;
+}
+@media(max-width:768px){
+  .abouts{
+    font-size: 18px;
+  }}
 
 
 .hero-img {
@@ -105,12 +115,42 @@ transition:  0.3s ;
   color: rgb(253, 250, 250);
   transform: scale(1.2);
 }
-.course{
-  background: transparent;
-  margin-top: 40px;
-  padding: 30px;
-  
+
+ @media(max-width:600px){
+  .cards{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+  }
+ }
+
+
+.boy {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  transition: all 0.3s ease;
 }
+
+@media (min-width: 768px) {
+  .boy {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .boy {
+    width: 10%;
+    max-width: 600px;
+    height: 60px;
+  }
+}
+
+
+ 
 .card{
   transition: 0.01;
 }

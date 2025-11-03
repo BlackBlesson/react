@@ -7,9 +7,9 @@ const Contact = () => {
     email: '',
     course: ''
   })
-  useEffect(()=>{
-    const savedEntries =JSON.parse(localStorage.getItem('EnquiryDetails')) || [];
-    alert(`Perviously ENtered details are ${savedEntries.map(entry => `Name: ${entry.name}, Mobile: ${entry.mobile}, Email: ${entry.email}, Course: ${entry.course}`)}`); 
+  useEffect(() => {
+    const savedEntries = JSON.parse(localStorage.getItem('EnquiryDetails')) || [];
+    console.log("Saved Entries:", savedEntries);
   })
 
   const handleChange = (e) => {
@@ -17,16 +17,16 @@ const Contact = () => {
     setForm(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const ExistingDetails= JSON.parse(localStorage.getItem("Old Enquiry Details",)) || [];
+    const ExistingDetails = JSON.parse(localStorage.getItem("Old Enquiry Details",)) || [];
 
     const newEntries = {
       ...form,
-      id:Date.now(),
+      id: Date.now(),
       submittedAt: new Date().toISOString()
     }
-    
+
   }
 
   return (
@@ -49,8 +49,8 @@ const Contact = () => {
             <br></br>
             <p className="mb-1">
               <i className="bi bi-geo-alt-fill text-warning fs-4 me-2" />
-             <span className="text-light">Old Bus Stand, Kinathukadavu, Coimbatore - 642109</span>
-           </p>            <br></br>
+              <span className="text-light">Old Bus Stand, Kinathukadavu, Coimbatore - 642109</span>
+            </p>            <br></br>
             <h2 className="text-warning">Get In Touch</h2>
 
             <p className="mb-1">

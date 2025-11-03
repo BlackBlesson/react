@@ -13,9 +13,9 @@ function App() {
   return (
     <>
       <section>
-        <hr className='border border-white m-0' />
+        {/* <hr className='border border-white m-0' /> */}
 
-        <nav className='navbar navbar-expand-lg navbar-dark fixed-top nav'>
+        <nav className='navbar navbar-expand-lg navbar-dark navbar-dark fixed-top nav'>
           <div className='container borde '>
             <div className='d-flex align-items-center'>
               <a href='#home'>

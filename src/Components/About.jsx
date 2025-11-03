@@ -14,12 +14,12 @@ const About = () => {
           <img
             src="/assets/about.png"
             alt="Success Academy"
-            className="img-fluid rounded-4 shadow-lg"
+            className="img-fluid rounded-4 shadow-lg boy"
             width='50%'
           />
         </div>
 
-        <div className="col-6">
+        <div className="col-6 abouts">
           <h3 className="text-warning">Success Academy — Where Learning Leads to Success</h3>
           <p>
             At <strong>Success Academy</strong>, we believe education is not just about grades —
@@ -36,7 +36,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="row mt-5">
+      <div className="row mt-5 g-4">
         <div className="col-md-4">
           <div className="card bg-dark text-light border-warning shadow-sm h-100">
             <div className="card-body">
