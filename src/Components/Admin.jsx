@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import AddCourse from './AddCourse'
+import '../App.css'
 
 const Admin = () => {
   const [entries, setEntries] = useState([])
@@ -44,7 +45,7 @@ const Admin = () => {
         <nav className='navbar navbar-expand-lg navbar-dark fixed-top nav'>
           <div className='container borde'>
             <div className='d-flex align-items-center'>
-              <img src='/assets/logo.png' className='rounded-circle border border-light p-2' height='60' alt="logo" />
+              <img src="/assets/logo.png" className='rounded-circle border border-light p-2' height='60' alt="logo" />
               <h2 className='text-light m-0 fs-3 ms-3'>Success Academy</h2>
             </div>
 
