@@ -19,12 +19,21 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const ExistingDetails = JSON.parse(localStorage.getItem("Old Enquiry Details",)) || [];
+    const ExistingDetails = JSON.parse(localStorage.getItem("EnquiryDetails")) || [];
 
     const newEntries = {
       ...form,
       id: Date.now(),
       submittedAt: new Date().toISOString()
+    }
+    const updateDetails = [...ExistingDetails, newEntries];
+    try {
+      localStorage.setItem("EnquiryDetails", JSON.stringify(updateDetails));
+      alert("Enguiry Details Submitted");
+      setForm({ name: "", mobile: "", email: "", course: "" })
+    } catch {
+      console.log("Error ", err);
+      alert("failed to load enguiry details")
     }
 
   }
@@ -32,32 +41,33 @@ const Contact = () => {
   return (
     <>
       <div className="container contact my-4">
-        <h2 className="heading text-light text-center">CONTACT US</h2>
-        <hr className=" w-25 mx-auto" />
+        <h2 className=" text-warning text-center">CONTACT US</h2>
+        <hr className="border border-warning w-25 mx-auto" />
         <div className="row">
           <div className="col-12 col-md-6  border-light p-3">
             <br></br>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435.95480976481616!2d77.02371607768399!3d10.826907734425351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba84f6725f184d5%3A0xe40716d0161f487a!2sKinathukadavu%2C%20Tamil%20Nadu%20642109!5e0!3m2!1sen!2sin!4v1761141391798!5m2!1sen!2sin"
-              width="300"
-              height="200"
+              width="600"
+              height="300"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className='map'
             />
             <br></br>
             <p className="mb-1">
               <i className="bi bi-geo-alt-fill text-warning fs-4 me-2" />
               <span className="text-light">Old Bus Stand, Kinathukadavu, Coimbatore - 642109</span>
             </p>            <br></br>
-            <h2 className="text-warning">Get In Touch</h2>
+            <h2 className="text-warning text-center">Get In Touch</h2>
 
-            <p className="mb-1">
+            <p className="mb-1 text-center">
               <i className="bi bi-envelope-at-fill text-warning fs-4 me-2" />
               <span className="text-light">abcdef@email.com</span>
             </p>
-            <p className="mb-1">
+            <p className="mb-1 text-center">
               <i className="bi bi-telephone-fill text-warning fs-4 me-2" />
               <span className="text-light">+91 1234567890</span>
             </p>
@@ -79,7 +89,6 @@ const Contact = () => {
                   maxLength={20}
                   required
                 />
-                <div className="form-text text-warning">(Must be 0–20 characters)</div>
               </div>
 
               <div className="mb-3">
@@ -95,7 +104,6 @@ const Contact = () => {
                   pattern="[0-9]{10}"
                   required
                 />
-                <div className="form-text text-warning">(Must be 10 digits)</div>
               </div>
 
               <div className="mb-3">
@@ -117,7 +125,8 @@ const Contact = () => {
                 <select
                   id="course"
                   name="course"
-                  className="form-select"
+                  className="form-select h-25 "
+
                   value={form.course}
                   onChange={handleChange}
                   required

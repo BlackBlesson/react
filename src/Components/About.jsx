@@ -5,7 +5,7 @@ const About = () => {
     <>
     <section className="about container text-light py-5">
       <div className="text-center mb-4">
-        <h2 className="heading">ABOUT US</h2>
+        <h2 className="text-warning">ABOUT US</h2>
         <hr className="border border-warning w-25 mx-auto" />
       </div>
 
