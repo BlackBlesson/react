@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 
-// const COURSE_DETAILS = 'CourseDetails'
 
 const AddCourse = () => {
     const [detail, setDetail] = useState({
@@ -65,12 +64,12 @@ const AddCourse = () => {
 
     return (
         <>
-            <section>
+            <section className=''>
                 <div className='pb-3 my-5'>
                 <h2 className='text-warning'>List Of Courses</h2>
                 </div>
                 <div className='table-responsive'>
-                    <table className='table table-sm table-striped table-secondary'>
+                    <table className='table table-sm table-striped table-secondary table-bordered'>
                         <thead>
                             <tr>
                                 <th>S.NO</th>
@@ -104,10 +103,10 @@ const AddCourse = () => {
                 <h2 className='text-warning mb-5'>Add Course</h2>
             </div>
             <div className='container '>
-                <div className='align-items-center justify-content-center'>
+                <div className='d-flex align-items-center justify-content-center mt-5 ' style={{ maxWidth: '1200px' }}>
                     <form className='container align-items-center' onSubmit={handleSubmit}>
                         <div className='d-flex mb-3 gap-4'>
-                            <label htmlFor='coursename' className='col-2 text-light'>Course Name :</label>
+                            <label htmlFor='coursename' className='col-2 text-light' style={{minWidth:"150px"}}>Course Name :</label>
                             <input
                                 type="text"
                                 name='coursename'
@@ -120,7 +119,7 @@ const AddCourse = () => {
                             />
                         </div>
                         <div className='d-flex mb-3 gap-4'>
-                            <label htmlFor='description' className='col-2 text-light'>Course Description :</label>
+                            <label htmlFor='description' className='col-2 text-light'style={{minWidth:"150px"}}>Course Description :</label>
                             <input
                                 type="text"
                                 name='description'
@@ -133,7 +132,7 @@ const AddCourse = () => {
                             />
                         </div>
                         <div className='d-flex mb-3 gap-4'>
-                            <label htmlFor='fees' className='col-2 text-light'> Course Fees :</label>
+                            <label htmlFor='fees' className='col-2 text-light'style={{minWidth:"150px"}}> Course Fees :</label>
                             <input
                                 type='text'
                                 name='fees'
@@ -146,7 +145,7 @@ const AddCourse = () => {
                             />
                         </div>
                         <div className='d-flex mb-3 gap-4'>
-                            <label htmlFor='duration' className='col-2 text-light'>Course Duration :</label>
+                            <label htmlFor='duration' className='col-2 text-light'style={{minWidth:"150px"}}>Course Duration :</label>
                             <input
                                 type='text'
                                 name='duration'

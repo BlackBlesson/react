@@ -9,17 +9,7 @@ const About = () => {
         <hr className="border border-warning w-25 mx-auto" />
       </div>
 
-      <div className="row align-items-center">
-        <div className="col-6">
-          <img
-            src="/assets/about.png"
-            alt="Success Academy"
-            className="img-fluid rounded-4 shadow-lg boy"
-            width='50%'
-          />
-        </div>
-
-        <div className="col-6 abouts">
+        <div className="col-12   abouts">
           <h3 className="text-warning">Success Academy — Where Learning Leads to Success</h3>
           <p>
             At <strong>Success Academy</strong>, we believe education is not just about grades —
@@ -34,7 +24,7 @@ const About = () => {
             ensuring students gain hands-on experience and real-world knowledge.
           </p>
         </div>
-      </div>
+      
 
       <div className="row mt-5 g-4">
         <div className="col-md-4">
@@ -75,14 +65,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="text-center mt-5">
-        <h4 className="text-warning">Join Us</h4>
-        <p>
-          At Success Academy, we don’t just teach — we <strong>transform learners into achievers</strong>.
-          Join our growing family and take your first step toward success!
-        </p>
       </div>
     </section>
     </>

@@ -30,10 +30,10 @@ const Login = () => {
                 <h2 className='text-center text-warning '>Admin Login</h2>
                     <hr className="border border-warning w-25 mx-auto" />
 
-                <div className='container'>
-                    <div className='container bg-light justify-content-center border border-warning w-50 p-5 rounded-3 mt-5'>
+                <div className='container d-flex justify-content-center mt-5'>
+                    <div className='container bg-light justify-content-center border border-warning w-100 p-5 rounded-3 mt-5'style={{ maxWidth: '800px' }}>
                         <form onSubmit={handleSubmit}>
-                            <div className='container row'>
+                            <div className='container row align-items-center'>
                                 <div className="mb-4 mt-4 row">
                                     <label htmlFor="username" className="col-5 col-form-label text-dark">Username</label>
                                     <div className="col-6">

@@ -61,19 +61,21 @@ background-image: linear-gradient(to right, #0c0226, #290413);
 }
 #enquiry{
   padding-top: 100px;
+  height: 100vh;
 }
 #addcourse{
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 #course{
   padding-top: 100px;
+  height: 100vh;
 }
 #about{
   padding-top: 100px;
 }
 #contact{
-  padding-top: 100px;
+    padding-top:60px;
 }
 .adminpage{
   padding-top:80px;
@@ -88,13 +90,13 @@ background-image: linear-gradient(to right, #0c0226, #290413);
 .nav{
   margin-top: 0px;
 }
-.abouts{
-  font-size: 25px;
-}
-@media(max-width:768px){
+ .abouts{
+  font-size: 20px;
+} 
+ @media(max-width:768px){
   .abouts{
     font-size: 18px;
-  }}
+  }} 
 
 
 .hero-img {

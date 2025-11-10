@@ -42,9 +42,9 @@ const Admin = () => {
         <h2 className='text-center text-warning'>Admin Page</h2>
         <hr className="border border-warning w-25 mx-auto" />
 
-        <nav className='navbar navbar-expand-lg navbar-dark fixed-top nav'>
+        {/* <nav className='navbar navbar-expand-lg navbar-dark fixed-top nav'>
           <div className='container borde'>
-            <div className='d-flex align-items-center'>
+            <div className='d-flex align-items-center col-4'>
               <img src="/assets/logo.png" className='rounded-circle border border-light p-2' height='60' alt="logo" />
               <h2 className='text-light m-0 fs-3 ms-3'>Success Academy</h2>
             </div>
@@ -54,16 +54,18 @@ const Admin = () => {
             </button>
 
             <div className='collapse navbar-collapse ' id="navbarNav">
+              <div className='col-4'>
               <ul className='navbar-nav me-auto mb-1 mb-lg-0 ms-1'>
                 <li className='nav-item'><a className='nav-link' href='#enquiry'>Enquiry Details</a></li>
                 <li className='nav-item'><a className='nav-link' href='#addcourse'>Add Courses</a></li>
               </ul>
-              <div>
+              </div>
+              <div className='col-4 text-end ms-auto'>
                 <a href='/'><button id='logout' className='btn btn-warning '>Logout</button></a>
               </div>
             </div>
           </div>
-        </nav>
+        </nav> */}
       </div>
       <section id='enquiry'>
         <div>
@@ -77,8 +79,9 @@ const Admin = () => {
           {entries.length === 0 ? (
             <h6>No enquiry received</h6>
           ) : (
+            <div className='mt-4'>
             <div className='table-responsive'>
-              <table className='table table-sm table-striped table-dark'>
+              <table className='table table-sm table-striped table-dark table-bordered border-light'>
                 <thead>
                   <tr>
                     <th>ID</th>
@@ -106,6 +109,7 @@ const Admin = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
             </div>
           )}
         </div>

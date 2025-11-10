@@ -14,11 +14,13 @@ import { BrowserRouter, Routes, Route, Link, Outlet, useLocation } from "react-r
 function Layout() {
   const location = useLocation();
   const showFooter = location.pathname === '/'
+  const isAdmin = location.pathname === '/admin'
+  const isLogin = location.pathname === '/login'
 
   return (
     <>
-      <nav className='navbar navbar-expand-lg navbar-dark fixed-top nav'>
-        <div className='container  borde'>
+      <nav className='navbar navbar-expand-lg navbar-dark fixed-top '>
+        <div className='container  borde p-2'>
           <div className='d-flex align-items-center col-4'>
             <Link to="/"><img src='/assets/logo.png' className='rounded-circle border border-light p-2' height='60' alt="logo" /></Link>
             <h2 className='text-light m-0 fs-3 ms-3'>Success Academy</h2>
@@ -30,15 +32,39 @@ function Layout() {
 
           <div className='collapse navbar-collapse col-4 mx-5 ' id="navbarNav">
             <ul className='navbar-nav me-auto mb-1 mb-lg-0 ms-1'>
-              <li className='nav-item'><a className='nav-link' href='#home'>Home</a></li>
-              <li className='nav-item'><a className='nav-link' href='#course'>Courses</a></li>
-              <li className='nav-item'><a className='nav-link' href='#about'>About</a></li>
-              <li className='nav-item'><a className='nav-link' href='#contact'>Contact Us</a></li>
+              {!isAdmin && !isLogin && (
+                <>
+                  <li className='nav-item'><a className='nav-link' href='#home'>Home</a></li>
+                  <li className='nav-item'><a className='nav-link' href='#course'>Courses</a></li>
+                  <li className='nav-item'><a className='nav-link' href='#about'>About</a></li>
+                  <li className='nav-item'><a className='nav-link' href='#contact'>Contact Us</a></li>
+                </>)}
             </ul>
-
-            <div className='col-4 text-end'>
+                { !isAdmin && !isLogin &&
+            <div className='col-4 text-end ms-auto me-5'>
               <Link to="/login"><button id='login' className='btn btn-warning '>Admin</button></Link>
             </div>
+              }
+              {isLogin && (
+                <div className='col-4 text-end ms-auto me-5'>
+                  <a href="/"><button className='btn btn-warning' id='back'>Back</button></a>
+                </div>
+              )}
+              {
+                isAdmin &&(
+                  <div className='collapse navbar-collapse ' id="navbarNav">
+                    <div className='col-4'>
+                    <ul className='navbar-nav me-auto mb-1 mb-lg-0 ms-1'>
+                      <li className='nav-item'><a className='nav-link' href='#enquiry'>Enquiry Details</a></li>
+                      <li className='nav-item'><a className='nav-link' href='#addcourse'>Add Courses</a></li>
+                    </ul>
+                    </div>
+                    <div className='col-4 text-end ms-auto me-5'>
+                      <a href='/'><button id='logout' className='btn btn-warning '>Logout</button></a>
+                    </div>
+                  </div>
+                )
+              }
           </div>
         </div>
 
@@ -50,19 +76,14 @@ function Layout() {
 
       {showFooter && (
         <footer>
-          <div className="container ">
-            <div className="row">
-              <div className="col-12 col-md-6">
-                <h5 className='text-light text-center mt-4'>© 2024 Success Academy. All rights reserved.</h5>
-              </div>
-              <div className="col-12 col-md-6 text-end">
-                <a href=''><i className="bi bi-whatsapp text-warning fs-2 "></i></a>
-                <a href=''><i className="bi bi-instagram text-warning fs-2 mx-3"></i></a>
-                <a href=''><i className="bi bi-facebook text-warning fs-2"></i></a>
-              </div>
+        <div className="container text-center py-2">
+            
+            <div className="text-light small">
+              © 2024 Success Academy. All rights reserved.
             </div>
-          </div>
-        </footer>
+
+        </div>
+      </footer>
       )}
     </>
   )
@@ -88,6 +109,8 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
         </Route>
+       <Route path="/admin" element={<Admin />} />
+
       </Routes>
     </BrowserRouter>
   )
