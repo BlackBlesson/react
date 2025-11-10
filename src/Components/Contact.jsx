@@ -33,11 +33,11 @@ const Contact = () => {
     <section className=" container-fluid text-light py-5  " id="">
       <h2 className="text-warning text-center mb-3">CONTACT US</h2>
       <hr className="border border-warning w-25 mx-auto mb-4" />
-        <div className='container-fluid row'>
-        <div className='col-6'>
-          <div className='map ratio ratio-16x9 mb-1'>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6941834000627!2d77.01758008932971!3d10.828390798228728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba84fba4c568e55%3A0xff01ebc2a915f09f!2sMizpah%20Language%20Academy!5e0!3m2!1sen!2sin!4v1762738397964!5m2!1sen!2sin"  style={{border:0}}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-          className='pt-4'></iframe>
+      <div className='container-fluid row'>
+        <div className='col-12 col-md-6'>
+          <div className='map ratio ratio-16x9 mb-1 mt-4'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6941834000627!2d77.01758008932971!3d10.828390798228728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba84fba4c568e55%3A0xff01ebc2a915f09f!2sMizpah%20Language%20Academy!5e0!3m2!1sen!2sin!4v1762738397964!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+              className='pt-4'></iframe>
           </div>
           <p className="mb-1">
             <i className="bi bi-geo-alt-fill text-warning fs-4 me-2" />
@@ -58,9 +58,11 @@ const Contact = () => {
             <a href="#"><i className="bi bi-facebook text-warning fs-5"></i></a>
           </div>
         </div>
-        
 
-        <div className=" col-6">
+
+        <div className=" col-12 col-md-6">
+          <h3 className="text-warning text-center mb-3">For Enquiry</h3>
+
           <form onSubmit={handleSubmit} noValidate>
             <div className="mb-3">
               <label className="form-label text-light">Name</label>
